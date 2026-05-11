@@ -1,0 +1,3 @@
+/Users/rohitganguly/Desktop/MarkerScan/android/app/.cxx/RelWithDebInfo/55594nb3/arm64-v8a/CMakeFiles/appmodules.dir
+/Users/rohitganguly/Desktop/MarkerScan/android/app/.cxx/RelWithDebInfo/55594nb3/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/rohitganguly/Desktop/MarkerScan/android/app/.cxx/RelWithDebInfo/55594nb3/arm64-v8a/CMakeFiles/rebuild_cache.dir

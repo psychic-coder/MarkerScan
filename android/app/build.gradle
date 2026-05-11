@@ -1,0 +1,89 @@
+// android/app/build.gradle
+
+apply plugin: "com.android.application"
+apply plugin: "org.jetbrains.kotlin.android"
+apply plugin: "com.facebook.react"
+
+react {
+    // React Native configuration
+}
+
+android {
+    ndkVersion rootProject.ext.ndkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    namespace "com.markerscan"
+
+    defaultConfig {
+        applicationId "com.markerscan"
+        minSdkVersion rootProject.ext.minSdkVersion   // 21+
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        // Required for VisionCamera frame processing
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+        }
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('debug.keystore')
+            storePassword 'android'
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+        }
+        release {
+            if (project.hasProperty('MYAPP_UPLOAD_STORE_FILE')) {
+                storeFile file(MYAPP_UPLOAD_STORE_FILE)
+                storePassword MYAPP_UPLOAD_STORE_PASSWORD
+                keyAlias MYAPP_UPLOAD_KEY_ALIAS
+                keyPassword MYAPP_UPLOAD_KEY_PASSWORD
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            signingConfig = signingConfigs.release
+            minifyEnabled = (findProperty('enableProguardInReleaseBuilds') ?: "false").toBoolean()
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
+dependencies {
+    // React Native
+    implementation("com.facebook.react:react-android")
+    implementation("com.facebook.react:hermes-android")
+
+    // ── OpenCV Android SDK ────────────────────────────────────────────────────
+    // Provides all image processing capabilities (contour detection, perspective
+    // transform, adaptive threshold, etc.)
+    implementation 'com.quickbirdstudios:opencv:4.5.3.0'
+
+    // Kotlin coroutines (used for async frame processing)
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
+
+    // VisionCamera (declared in package.json → auto-linked, but explicit here for clarity)
+    // implementation project(':react-native-vision-camera')
+}
+
+// ── ProGuard keep rules for OpenCV ────────────────────────────────────────────
+// (Also add to proguard-rules.pro)
+
+apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)

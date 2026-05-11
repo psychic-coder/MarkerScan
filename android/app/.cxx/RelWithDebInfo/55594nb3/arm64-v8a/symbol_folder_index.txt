@@ -1,0 +1,1 @@
+/Users/rohitganguly/Desktop/MarkerScan/android/app/build/intermediates/cxx/RelWithDebInfo/55594nb3/obj/arm64-v8a

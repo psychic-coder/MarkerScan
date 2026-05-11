@@ -1,0 +1,23 @@
+{
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "target": "esnext",
+    "module": "esnext",
+    "lib": ["es2020"],
+    "jsx": "react-native",
+    "moduleResolution": "bundler",
+    "types": [],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src/**/*", "android/**/*.ts"],
+  "exclude": ["node_modules", "**/__tests__/**"]
+}

@@ -1,0 +1,61 @@
+{
+  "buildFiles": [
+    "/Users/rohitganguly/Desktop/MarkerScan/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/rohitganguly/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/rohitganguly/Desktop/MarkerScan/android/app/.cxx/RelWithDebInfo/55594nb3/arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/rohitganguly/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/rohitganguly/Desktop/MarkerScan/android/app/.cxx/RelWithDebInfo/55594nb3/arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "appmodules::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "appmodules",
+      "output": "/Users/rohitganguly/Desktop/MarkerScan/android/app/build/intermediates/cxx/RelWithDebInfo/55594nb3/obj/arm64-v8a/libappmodules.so",
+      "runtimeFiles": [
+        "/Users/rohitganguly/.gradle/caches/transforms-3/9d083025b3147d23baf9dc4c1c7a12ed/transformed/jetified-react-android-0.73.6-release/prefab/modules/fabricjni/libs/android.arm64-v8a/libfabricjni.so",
+        "/Users/rohitganguly/.gradle/caches/transforms-3/a97b81f704e6fdbf181c7ba8e035daf8/transformed/jetified-fbjni-0.5.1/prefab/modules/fbjni/libs/android.arm64-v8a/libfbjni.so",
+        "/Users/rohitganguly/.gradle/caches/transforms-3/9d083025b3147d23baf9dc4c1c7a12ed/transformed/jetified-react-android-0.73.6-release/prefab/modules/folly_runtime/libs/android.arm64-v8a/libfolly_runtime.so",
+        "/Users/rohitganguly/.gradle/caches/transforms-3/9d083025b3147d23baf9dc4c1c7a12ed/transformed/jetified-react-android-0.73.6-release/prefab/modules/glog/libs/android.arm64-v8a/libglog.so",
+        "/Users/rohitganguly/.gradle/caches/transforms-3/9d083025b3147d23baf9dc4c1c7a12ed/transformed/jetified-react-android-0.73.6-release/prefab/modules/jsi/libs/android.arm64-v8a/libjsi.so",
+        "/Users/rohitganguly/.gradle/caches/transforms-3/9d083025b3147d23baf9dc4c1c7a12ed/transformed/jetified-react-android-0.73.6-release/prefab/modules/react_codegen_rncore/libs/android.arm64-v8a/libreact_codegen_rncore.so",
+        "/Users/rohitganguly/.gradle/caches/transforms-3/9d083025b3147d23baf9dc4c1c7a12ed/transformed/jetified-react-android-0.73.6-release/prefab/modules/react_debug/libs/android.arm64-v8a/libreact_debug.so",
+        "/Users/rohitganguly/.gradle/caches/transforms-3/9d083025b3147d23baf9dc4c1c7a12ed/transformed/jetified-react-android-0.73.6-release/prefab/modules/react_utils/libs/android.arm64-v8a/libreact_utils.so",
+        "/Users/rohitganguly/.gradle/caches/transforms-3/9d083025b3147d23baf9dc4c1c7a12ed/transformed/jetified-react-android-0.73.6-release/prefab/modules/react_nativemodule_core/libs/android.arm64-v8a/libreact_nativemodule_core.so",
+        "/Users/rohitganguly/.gradle/caches/transforms-3/9d083025b3147d23baf9dc4c1c7a12ed/transformed/jetified-react-android-0.73.6-release/prefab/modules/react_newarchdefaults/libs/android.arm64-v8a/libreact_newarchdefaults.so",
+        "/Users/rohitganguly/.gradle/caches/transforms-3/9d083025b3147d23baf9dc4c1c7a12ed/transformed/jetified-react-android-0.73.6-release/prefab/modules/react_render_componentregistry/libs/android.arm64-v8a/libreact_render_componentregistry.so",
+        "/Users/rohitganguly/.gradle/caches/transforms-3/9d083025b3147d23baf9dc4c1c7a12ed/transformed/jetified-react-android-0.73.6-release/prefab/modules/react_render_core/libs/android.arm64-v8a/libreact_render_core.so",
+        "/Users/rohitganguly/.gradle/caches/transforms-3/9d083025b3147d23baf9dc4c1c7a12ed/transformed/jetified-react-android-0.73.6-release/prefab/modules/react_render_debug/libs/android.arm64-v8a/libreact_render_debug.so",
+        "/Users/rohitganguly/.gradle/caches/transforms-3/9d083025b3147d23baf9dc4c1c7a12ed/transformed/jetified-react-android-0.73.6-release/prefab/modules/react_render_graphics/libs/android.arm64-v8a/libreact_render_graphics.so",
+        "/Users/rohitganguly/.gradle/caches/transforms-3/9d083025b3147d23baf9dc4c1c7a12ed/transformed/jetified-react-android-0.73.6-release/prefab/modules/react_render_imagemanager/libs/android.arm64-v8a/libreact_render_imagemanager.so",
+        "/Users/rohitganguly/.gradle/caches/transforms-3/9d083025b3147d23baf9dc4c1c7a12ed/transformed/jetified-react-android-0.73.6-release/prefab/modules/react_render_mapbuffer/libs/android.arm64-v8a/libreact_render_mapbuffer.so",
+        "/Users/rohitganguly/.gradle/caches/transforms-3/9d083025b3147d23baf9dc4c1c7a12ed/transformed/jetified-react-android-0.73.6-release/prefab/modules/rrc_image/libs/android.arm64-v8a/librrc_image.so",
+        "/Users/rohitganguly/.gradle/caches/transforms-3/9d083025b3147d23baf9dc4c1c7a12ed/transformed/jetified-react-android-0.73.6-release/prefab/modules/rrc_view/libs/android.arm64-v8a/librrc_view.so",
+        "/Users/rohitganguly/.gradle/caches/transforms-3/9d083025b3147d23baf9dc4c1c7a12ed/transformed/jetified-react-android-0.73.6-release/prefab/modules/rrc_legacyviewmanagerinterop/libs/android.arm64-v8a/librrc_legacyviewmanagerinterop.so",
+        "/Users/rohitganguly/.gradle/caches/transforms-3/9d083025b3147d23baf9dc4c1c7a12ed/transformed/jetified-react-android-0.73.6-release/prefab/modules/runtimeexecutor/libs/android.arm64-v8a/libruntimeexecutor.so",
+        "/Users/rohitganguly/.gradle/caches/transforms-3/9d083025b3147d23baf9dc4c1c7a12ed/transformed/jetified-react-android-0.73.6-release/prefab/modules/turbomodulejsijni/libs/android.arm64-v8a/libturbomodulejsijni.so",
+        "/Users/rohitganguly/.gradle/caches/transforms-3/9d083025b3147d23baf9dc4c1c7a12ed/transformed/jetified-react-android-0.73.6-release/prefab/modules/yoga/libs/android.arm64-v8a/libyoga.so"
+      ]
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "/Users/rohitganguly/Library/Android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang.lld",
+      "cppCompilerExecutable": "/Users/rohitganguly/Library/Android/sdk/ndk/26.1.10909125/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++.lld"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}
