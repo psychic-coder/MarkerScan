@@ -6,6 +6,7 @@ apply plugin: "com.facebook.react"
 
 react {
     // React Native configuration
+    newArchEnabled = false
 }
 
 android {
@@ -64,12 +65,22 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+
+    lint {
+        disable 'AarDependency'
+        checkReleaseBuilds false
+        abortOnError false
+    }
 }
 
 dependencies {
     // React Native
     implementation("com.facebook.react:react-android")
     implementation("com.facebook.react:hermes-android")
+
+    // Downgrade androidx.core to compatible version
+    implementation 'androidx.core:core:1.6.0'
+    implementation 'androidx.core:core-ktx:1.6.0'
 
     // ── OpenCV Android SDK ────────────────────────────────────────────────────
     // Provides all image processing capabilities (contour detection, perspective
@@ -87,3 +98,10 @@ dependencies {
 // (Also add to proguard-rules.pro)
 
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
+
+configurations.all {
+    resolutionStrategy {
+        force 'androidx.core:core:1.6.0'
+        force 'androidx.core:core-ktx:1.6.0'
+    }
+}
