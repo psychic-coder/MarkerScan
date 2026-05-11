@@ -553,5 +553,3 @@ object MarkerPipeline {
 // ─── Extension ────────────────────────────────────────────────────────────────
 
 private operator fun IntArray.component4(): Int = this[3]
-
-private fun Double.roundToInt(): Int = kotlin.math.roundToInt(this)
